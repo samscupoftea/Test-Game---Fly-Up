@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+
+
+}
+
+#block {
+    width: 500;
+    height: 50px;
+    background-color: rgb(244, 240, 240);
+    background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
+    background-position: center;
+    position: relative;
+    left: 400px;
+    animation: block 3.5s infinite linear;
+
+}
+
+@keyframes block {
+    0% {
+        bottom: 400px
+    }
+
+    100% {
+        bottom: -50px
+    }
+}
