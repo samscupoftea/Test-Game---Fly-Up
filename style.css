@@ -13,13 +13,13 @@
 }
 
 #block {
-    width: 500;
+    width: 400px;
     height: 50px;
-    background-color: rgb(244, 240, 240);
+    background-color: rgb(202, 6, 6);
     background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
     background-position: center;
     position: relative;
-    left: 400px;
+    left: 0px;
     animation: block 3.5s infinite linear;
 
 }
@@ -30,6 +30,6 @@
     }
 
     100% {
-        bottom: -50px
+        bottom: -500px
     }
 }
