@@ -5,7 +5,7 @@ const block = document.getElementById("block");
 const gap = document.getElementById("gap");
 
 gap.addEventListener('animationiteration', () => {
-    let random = -((Math.random() * 300) + 150);
+    let random = -((Math.random() * 120) + 150);
     gap.style.right = random + "px";
 
 });
