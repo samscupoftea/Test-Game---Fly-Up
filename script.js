@@ -4,13 +4,13 @@
 const block = document.getElementById("block");
 const gap = document.getElementById("gap");
 
-gap.addEventListener('animationiteration'), () => {
+gap.addEventListener('animationiteration', () => {
     let random = -((Math.random() * 300) + 150);
-    gap.style.top = random + "px";
+    gap.style.right = random + "px";
 
-};
+});
 
-
+console.log("HELLO WORLD");
 
 
 
