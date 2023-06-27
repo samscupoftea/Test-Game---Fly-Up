@@ -9,7 +9,29 @@ gap.addEventListener('animationiteration', () => {
     gap.style.right = random + "px";
 
 });
+//CREATE PLAYER SPRITE IN JS. 
+class Sprite {
+    constructor(position) {
+        this.position
+    }
+    //what should the sprite look like? 
+    draw() {
+        c.fillStyle = 'red'
+        c.fillRect(this.position.x, this.position.y, 30, 30)
 
+    }
+
+}
+
+
+const player = new Sprite({
+    x: 0,
+    y: 0
+})
+
+player.draw();
+
+console.log(player)
 console.log("HELLO WORLD");
 
 
