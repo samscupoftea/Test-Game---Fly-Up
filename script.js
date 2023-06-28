@@ -1,32 +1,51 @@
-const canvas = document.querySelector('canvas')
-const c = canvas.getContext('2d')
+// const canvas = document.querySelector('canvas')
+// const c = canvas.getContext('2d')
 
-canvas.width = 400;
-canvas.height = 500;
+
 
 const block = document.getElementById("block");
 const gap = document.getElementById("gap");
 const character = document.getElementById("sprite");
+let interval;
+let both = 0;
 
 function moveLeft() {
     const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
-    character.style.left = left + 1 + "px";
+    character.style.left = left - 2 + "px";
 }
 
 function moveRight() {
-    const right = parseInt(window.getComputedStyle(characer).getPropertyValue("right"));
-    character.style.right = right - 1 + "px";
+    const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    character.style.left = left + 2 + "px";
 }
 
+document.addEventListener("keydown", event => {
+    if (both == 0) {
+        both++;
+        if (event.key === "ArrowLeft") {
+            interval = setInterval(moveLeft, 1);
+        }
+        if (event.key === "ArrowRight") {
+            interval = setInterval(moveRight, 1);
+        }
+    }
+});
+
+document.addEventListener("keyup", event => {
+    clearInterval(interval);
+    both = 0;
+});
 
 
 
 
 
-// gap.addEventListener('animationiteration', () => {
-//     let random = -((Math.random() * 200) + 150);
-//     gap.style.right = random + "px";
-// });
+gap.addEventListener('animationiteration', () => {
+    let random = -((Math.random() * 200) + 150);
+    gap.style.right = random + "px";
+});
+
+
 
 // document.addEventListener("mousemove", e => {
 //     player.position = (e.x / window.innerHeight) * 100;
