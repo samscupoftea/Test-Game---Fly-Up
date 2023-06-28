@@ -62,26 +62,23 @@ gap.addEventListener('animationiteration', () => {
 
 
 
-//CREATE PLAYER SPRITE IN JS. 
-class sprite {
-    constructor(position) {
-        this.position
-    }
-    //what should the sprite look like? 
-    draw() {
-        c.fillStyle = 'red'
-        c.fillRect(this.position.x, this.position.y, 30, 30)
+// //CREATE PLAYER SPRITE IN JS. 
+// class sprite {
+//     constructor(position) {
+//         this.position
+//     }
+//     //what should the sprite look like? 
+//     draw() {
+//         c.fillStyle = 'red'
+//         c.fillRect(this.position.x, this.position.y, 30, 30)
 
-    }
+//     }
 
-}
+// }
 
 
 
-player.draw();
 
-console.log(player)
-console.log("HELLO WORLD");
 
 
 
