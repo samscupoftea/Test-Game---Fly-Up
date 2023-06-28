@@ -37,14 +37,17 @@ document.addEventListener("keyup", event => {
 });
 
 
-
-
-
 gap.addEventListener('animationiteration', () => {
     let random = -((Math.random() * 200) + 150);
     gap.style.right = random + "px";
 });
 
+setInterval(function ()) {
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let blockBottom = parseInt(window.getComputedStyle(block).getPropertyValue("bottom"));
+
+    if (characterTop > )
+}
 
 
 // document.addEventListener("mousemove", e => {
