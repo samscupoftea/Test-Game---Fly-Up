@@ -6,45 +6,63 @@ canvas.height = 500;
 
 const block = document.getElementById("block");
 const gap = document.getElementById("gap");
+const character = document.getElementById("sprite");
 
-gap.addEventListener('animationiteration', () => {
-    let random = -((Math.random() * 200) + 150);
-    gap.style.right = random + "px";
-});
+function moveLeft() {
+    const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    character.style.left = left + 1 + "px";
+}
 
-
-
-
-
-
-
-
+function moveRight() {
+    const right = parseInt(window.getComputedStyle(characer).getPropertyValue("right"));
+    character.style.right = right - 1 + "px";
+}
 
 
-// //CREATE PLAYER SPRITE IN JS. 
-// class Sprite {
-//     constructor(position) {
-//         this.position
-//     }
-//     //what should the sprite look like? 
-//     draw() {
-//         c.fillStyle = 'red'
-//         c.fillRect(this.position.x, this.position.y, 30, 30)
-
-//     }
-
-// }
 
 
-// const player = new Sprite({
-//     x: 0,
-//     y: 0
+
+
+// gap.addEventListener('animationiteration', () => {
+//     let random = -((Math.random() * 200) + 150);
+//     gap.style.right = random + "px";
+// });
+
+// document.addEventListener("mousemove", e => {
+//     player.position = (e.x / window.innerHeight) * 100;
 // })
 
-// player.draw();
 
-// console.log(player)
-// console.log("HELLO WORLD");
+// const player = new Player(playerElem);
+
+// document.addEventListener('mousemove', (e) => {
+//     player.position = (e.x / window.innerHeight) * 100;
+// });
+
+
+
+
+
+//CREATE PLAYER SPRITE IN JS. 
+class sprite {
+    constructor(position) {
+        this.position
+    }
+    //what should the sprite look like? 
+    draw() {
+        c.fillStyle = 'red'
+        c.fillRect(this.position.x, this.position.y, 30, 30)
+
+    }
+
+}
+
+
+
+player.draw();
+
+console.log(player)
+console.log("HELLO WORLD");
 
 
 
