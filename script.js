@@ -5,7 +5,7 @@
 
 const block = document.getElementById("block");
 const gap = document.getElementById("gap");
-const character = document.getElementById("character");
+const character = document.getElementById("sprite");
 let interval;
 let both = 0;
 
@@ -42,37 +42,51 @@ gap.addEventListener('animationiteration', () => {
     gap.style.right = random + "px";
 });
 
-setInterval(function () {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
-    let blockBottom = blockTop + parseInt(window.getComputedStyle(block).getPropertyValue("height"));
+// setInterval(function () {
+//     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+//     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
+//     let blockBottom = blockTop + parseInt(window.getComputedStyle(block).getPropertyValue("height"));
 
-    if (
-        characterTop <= blockBottom &&
-        characterTop >= blockTop &&
-        (character.style.left >= block.offsetLeft && character.style.left <= block.offsetLeft + block.offsetWidth)
-    ) {
-        // Game over condition: character hits the blocks
-        clearInterval(interval);
-        alert("Game over!");
-        // Reset character position or perform other game over actions
-    }
-}, 10);
+//     if (
+//         characterTop <= blockBottom &&
+//         characterTop >= blockTop &&
+//         (character.style.left >= block.offsetLeft && character.style.left <= block.offsetLeft + block.offsetWidth)
+//     ) {
+//         // Game over condition: character hits the blocks
+//         clearInterval(interval);
+//         alert("Game over!");
+//         // Reset character position or perform other game over actions
+//     }
+// }, 10);
 
 
 
-setInterval(function () {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+// setInterval(function () {
+//     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
 
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    let gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
-    let cTop = -(500 - characterTop);
-    if (((blockLeft < 20) && (blockLeft > -50) && ((cTop < holeTop) || (cTop > holeTop + 130)))) {
-        alert("Game over. Score: " + (counter - 1));
-        character.style.top = 100 + "px";
-        counter = 0;
-    }
-}, 10);
+//     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+//     let gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
+//     let cTop = -(500 - characterTop);
+//     if (((blockLeft < 20) && (blockLeft > -50) && ((cTop < holeTop) || (cTop > holeTop + 130)))) {
+//         alert("Game over. Score: " + (counter - 1));
+//         character.style.top = 100 + "px";
+//         counter = 0;
+//     }
+// }, 10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
