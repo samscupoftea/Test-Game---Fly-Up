@@ -71,6 +71,8 @@
     height: 40px;
     color: black;
     background-color: black;
-    position: absolute;
-    top: 100px;
+    position: relative;
+    top: 380px;
+    right: -180px;
+    border-radius: 50%;
 }
