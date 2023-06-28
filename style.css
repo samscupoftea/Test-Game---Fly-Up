@@ -21,11 +21,7 @@
     background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
     background-position: center;
     position: relative;
-
     float: left;
-
-
-
     animation: block 1.5s infinite linear;
 
 }
@@ -51,7 +47,6 @@
     position: relative;
     animation: block 1.5s infinite linear;
 
-
 }
 
 @keyframes gap {
@@ -73,13 +68,7 @@
     background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
     background-position: center;
     position: relative;
-
-
     float: left;
-
-
-
-
     animation: block 1.5s infinite linear;
     animation-delay: -2.1s;
 }
@@ -126,7 +115,7 @@
 
 
 
-#sprite {
+#character {
     width: 40px;
     height: 40px;
     color: black;
