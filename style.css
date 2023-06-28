@@ -66,13 +66,73 @@
 
 }
 
+#block2 {
+    width: 400px;
+    height: 50px;
+    background-color: rgb(42, 6, 202);
+    background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
+    background-position: center;
+    position: relative;
+
+
+    float: left;
+
+
+
+
+    animation: block 1.5s infinite linear;
+    animation-delay: -2.1s;
+}
+
+@keyframes block2 {
+    0% {
+        bottom: 300px
+    }
+
+    100% {
+        bottom: -450px
+    }
+
+
+}
+
+#gap2 {
+    width: 160px;
+    height: 50px;
+    background-color: rgb(249, 9, 209);
+    background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
+    background-position: center;
+    position: relative;
+    animation: block 1.5s infinite linear;
+    animation-delay: -2.1s;
+
+
+}
+
+@keyframes gap {
+    0% {
+        bottom: 200px
+    }
+
+    100% {
+        bottom: -450px
+    }
+
+
+}
+
+
+
+
+
+
 #sprite {
     width: 40px;
     height: 40px;
     color: black;
     background-color: black;
     position: relative;
-    top: 380px;
+    top: 350px;
     right: -180px;
     border-radius: 50%;
 }
