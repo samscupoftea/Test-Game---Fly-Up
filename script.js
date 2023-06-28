@@ -42,12 +42,17 @@ gap.addEventListener('animationiteration', () => {
     gap.style.right = random + "px";
 });
 
-setInterval(function ()) {
+setInterval(function () {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockBottom = parseInt(window.getComputedStyle(block).getPropertyValue("bottom"));
 
-    if (characterTop > )
-}
+    if (characterTop <= blockBottom && characterTop >= blockBottom - 50) {
+        // Game over condition: character hits the blocks
+        clearInterval(interval);
+        alert("Game over!");
+        // Reset character position or perform other game over actions
+    }
+}, 10);
 
 
 // document.addEventListener("mousemove", e => {
