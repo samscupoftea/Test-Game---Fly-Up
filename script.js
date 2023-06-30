@@ -61,20 +61,52 @@ gap.addEventListener('animationiteration', () => {
 
 
 
-// setInterval(function () {
-//     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+setInterval(function () {
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
 
-//     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-//     let gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
-//     let cTop = -(500 - characterTop);
-//     if (((blockLeft < 20) && (blockLeft > -50) && ((cTop < holeTop) || (cTop > holeTop + 130)))) {
-//         alert("Game over. Score: " + (counter - 1));
-//         character.style.top = 100 + "px";
-//         counter = 0;
-//     }
-// }, 10);
+    let blockBottom = parseInt(window.getComputedStyle(block).getPropertyValue("bottom"));
+    let gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
+    let cTop = -(500 - characterTop);
+    if (((blockBottom < 20) && (blockBottom > -50) && ((cTop < gapTop) || (cTop > gapTop + 130)))) {
+        alert("Game over. Score: " + (counter - 1));
+        character.style.top = 100 + "px";
+        counter = 0;
+    }
+}, 10);
 
 
+
+
+
+let div1 = document.getElementById('div1').getBoundingClientRect();
+let div1Top = div1.top;
+let div1Left = div1.left;
+let div1Right = div1.right
+let div1Bottom = div1.bottom
+
+let div2 = document.getElementById('div2').getBoundingClientRect();
+let div2Top = div1.top;
+let div2Left = div1.left;
+let div2Right = div1.right
+let div2Bottom = div1.bottom
+
+if ((div2Top > div1Top && div2Top < div1Bottom) || (div2Bottom > div1Top && div2Bottom < div1Bottom)) {
+    let verticalMatch = true
+} else {
+    let verticalMatch = false
+}
+
+if ((div2Right > div1Left && div2Right < div1Right) || (div2Left < div1Right && div2Left > div1Left)) {
+    let horizontalMatch = true
+} else {
+    let horizontalMatch = false
+}
+
+if (horizontalMatch && verticallMatch) {
+    let intersect = true
+} else {
+    let intersect = false
+}
 
 
 
