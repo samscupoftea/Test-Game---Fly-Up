@@ -146,7 +146,7 @@ const block2 = document.getElementById("block2");
 const gap = document.getElementById("gap");
 const character = document.getElementById("sprite");
 let interval;
-let both = 0;
+
 
 function moveLeft() {
     const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
@@ -180,25 +180,29 @@ document.addEventListener("keyup", event => {
 gap.addEventListener("animationiteration", () => {
     let random = -((Math.random() * 200) + 150);
     gap.style.right = random + "px";
+    checkCollision();
 });
 
 function checkCollision() {
     const characterRect = character.getBoundingClientRect();
     const blockRect = block.getBoundingClientRect();
-    const block2Rect = block2.getBoundingClientRect();
+    const blockRect2 = block2.getBoundingClientRect();
 
 
-    if (
+    if ((
         characterRect.top <= blockRect.bottom &&
         characterRect.top >= blockRect.top &&
         characterRect.left >= blockRect.left &&
-        characterRect.right <= blockRect.right &&
+        characterRect.right <= blockRect.right)
+        ||
 
-        characterRect.top <= blockRect2.bottom &&
-        characterRect.top >= blockRect2.top &&
-        characterRect.left >= blockRect2.left &&
-        characterRect.right <= blockRect2.right
-    ) {
+        (
+
+            characterRect.top <= blockRect2.bottom &&
+            characterRect.top >= blockRect2.top &&
+            characterRect.left >= blockRect2.left &&
+            characterRect.right <= blockRect2.right
+        )) {
         // Game over condition: character hits the blocks
         clearInterval(interval);
         alert("Game over!");
