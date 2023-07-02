@@ -142,6 +142,7 @@
 
 
 const block = document.getElementById("block");
+const block2 = document.getElementById("block2");
 const gap = document.getElementById("gap");
 const character = document.getElementById("sprite");
 let interval;
