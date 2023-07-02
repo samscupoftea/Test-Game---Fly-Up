@@ -78,31 +78,31 @@ setInterval(function () {
 
 
 
-let div1 = document.getElementById('div1').getBoundingClientRect();
-let div1Top = div1.top;
-let div1Left = div1.left;
-let div1Right = div1.right
-let div1Bottom = div1.bottom
+character = document.getElementById('character').getBoundingClientRect();
+let characterTop = character.top;
+let characterLeft = character.left;
+let characterRight = character.right
+let characterBottom = character.bottom
 
-let div2 = document.getElementById('div2').getBoundingClientRect();
-let div2Top = div1.top;
-let div2Left = div1.left;
-let div2Right = div1.right
-let div2Bottom = div1.bottom
+block = document.getElementById('block').getBoundingClientRect();
+let blockTop = block.top;
+let blockLeft = block.left;
+let blockRight = block.right
+let blockBottom = block.bottom
 
-if ((div2Top > div1Top && div2Top < div1Bottom) || (div2Bottom > div1Top && div2Bottom < div1Bottom)) {
+if ((blockTop > div1Top && blockTop < div1Bottom) || (blockBottom > div1Top && blockBottom < div1Bottom)) {
     let verticalMatch = true
 } else {
     let verticalMatch = false
 }
 
-if ((div2Right > div1Left && div2Right < div1Right) || (div2Left < div1Right && div2Left > div1Left)) {
+if ((blockRight > div1Left && blockRight < div1Right) || (blockLeft < div1Right && blockLeft > div1Left)) {
     let horizontalMatch = true
 } else {
     let horizontalMatch = false
 }
 
-if (horizontalMatch && verticallMatch) {
+if (horizontalMatch && verticalMatch) {
     let intersect = true
 } else {
     let intersect = false
