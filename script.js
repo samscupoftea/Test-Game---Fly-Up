@@ -184,13 +184,19 @@ gap.addEventListener("animationiteration", () => {
 function checkCollision() {
     const characterRect = character.getBoundingClientRect();
     const blockRect = block.getBoundingClientRect();
+    const block2Rect = block2.getBoundingClientRect();
 
 
     if (
         characterRect.top <= blockRect.bottom &&
         characterRect.top >= blockRect.top &&
         characterRect.left >= blockRect.left &&
-        characterRect.right <= blockRect.right
+        characterRect.right <= blockRect.right &&
+
+        characterRect.top <= blockRect2.bottom &&
+        characterRect.top >= blockRect2.top &&
+        characterRect.left >= blockRect2.left &&
+        characterRect.right <= blockRect2.right
     ) {
         // Game over condition: character hits the blocks
         clearInterval(interval);
