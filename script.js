@@ -90,13 +90,13 @@ let blockLeft = block.left;
 let blockRight = block.right
 let blockBottom = block.bottom
 
-if ((blockTop > div1Top && blockTop < div1Bottom) || (blockBottom > div1Top && blockBottom < div1Bottom)) {
+if ((blockTop > characterTop && blockTop < characterBottom) || (blockBottom > characterTop && blockBottom < characterBottom)) {
     let verticalMatch = true
 } else {
     let verticalMatch = false
 }
 
-if ((blockRight > div1Left && blockRight < div1Right) || (blockLeft < div1Right && blockLeft > div1Left)) {
+if ((blockRight > characterLeft && blockRight < characterRight) || (blockLeft < characterRight && blockLeft > characterLeft)) {
     let horizontalMatch = true
 } else {
     let horizontalMatch = false
