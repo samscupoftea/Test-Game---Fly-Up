@@ -22,7 +22,7 @@
     background-position: center;
     position: relative;
     float: left;
-    animation: block 1.5s infinite linear;
+    animation: block 1.7s infinite linear;
 
 }
 
@@ -45,7 +45,7 @@
     background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
     background-position: center;
     position: relative;
-    animation: block 1.5s infinite linear;
+    animation: block 1.7s infinite linear;
 
 }
 
@@ -69,7 +69,7 @@
     background-position: center;
     position: relative;
     float: left;
-    animation: block 1.5s infinite linear;
+    animation: block 1.7s infinite linear;
     animation-delay: -2.1s;
 }
 
@@ -92,7 +92,7 @@
     background-image: url(./Images/red-laser-beams-on-a-black-backgroundeps-10-vector-5089287.jpg);
     background-position: center;
     position: relative;
-    animation: block 1.5s infinite linear;
+    animation: block 1.7s infinite linear;
     animation-delay: -2.1s;
 
 

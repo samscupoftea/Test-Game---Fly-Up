@@ -151,13 +151,15 @@ let interval;
 function moveLeft() {
     const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     character.style.left = left - 2 + "px";
-    checkCollision();
+
+
 }
 
 function moveRight() {
     const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     character.style.left = left + 2 + "px";
-    checkCollision();
+
+
 }
 
 document.addEventListener("keydown", event => {
@@ -180,8 +182,41 @@ document.addEventListener("keyup", event => {
 gap.addEventListener("animationiteration", () => {
     let random = -((Math.random() * 200) + 150);
     gap.style.right = random + "px";
-    checkCollision()
+
 });
+
+
+
+let isColliding = function (character, block) {
+
+    let characterOffset = character.getBoundingClientRect();
+    let characterHeight = character.outerHeight(true);
+    let characterWidth = character.outerWidth(true);
+    let characterTop = characterOffset.top + characterHeight;
+    let characterLeft = characterOffset.left + characterWidth;
+
+    let blockOffset = block.getBoundingClientRect();
+    let blockHeight = block.outerHeight(true);
+    let blockWidth = block.outerWidth(true);
+    let blockTop = block.top + blockHeight;
+    let blockLeft = blockOffset.left + blockWidth;
+
+    return !(characterTop < blockOffset.top || characteOffset.top > blockTop || characteLeft < blockOffset.left || characteOffset.left > blockLeft) && console.log('COLLIDE');
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function checkCollision() {
 //     const characterRect = character.getBoundingClientRect();
@@ -209,5 +244,3 @@ gap.addEventListener("animationiteration", () => {
 //         // Reset character position or perform other game over actions
 //     }
 // }
-
-
